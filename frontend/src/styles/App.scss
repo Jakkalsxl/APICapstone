@@ -1,0 +1,475 @@
+// Import Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500);
+
+$primary-color: #09F56E;
+$secondary-color: #06BD63;
+$highlight-color: #039C47;
+$bg-color: #ececec;
+$text-color: #8A8A8A;
+$border-color: #000;
+$hover-bg-color: #f0f0f0;
+$bg-color2: #09a11686;
+$bg-color3: #bcbcea;
+$bg-color4: #09a11656;
+$link-text-stroke: #2100DE;
+
+// General
+body{
+  padding: 25pt; // Padding for the entire page
+}
+
+.link{
+  color: inherit; // Inherit the color property from parent element
+  text-decoration: none; // Remove underlines from links
+}
+
+a{
+  text-decoration: none; // Remove underlines from links
+
+}
+
+.label {
+  text-align: center; // Center-align text
+  white-space: nowrap; // Prevent text from folding
+  overflow: hidden; // Clip overflowing content
+}
+
+
+#RepoPageInfo .data {
+  margin-left: -100px; // Adjust left margin for data
+}
+
+#RepoPageInfo .lable {
+  margin-right: -100px; // Adjust right margin for labels
+}
+
+#searchBar {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0; // Add margin for spacing
+}
+
+.search-container{
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  width: 500px;
+  overflow: hidden; // Hide overflowing content
+}
+
+.search-button{
+  background: none;
+  border:none;
+  cursor: pointer;
+  padding:10px;
+  margin: 0;
+  outline: none;
+  color: $primary-color;
+}
+
+#searchBar input{
+  border: none;
+  padding: 10px;
+  outline: none;
+  flex: 1;
+}
+
+// Hover styles for search button
+.search-button:hover{
+  background-color: $hover-bg-color;
+  color: $secondary-color;
+}
+
+// Hover styles for the magnifying glass icon
+.search-button:hover .green-magnifying-glass{
+  fill: $highlight-color;
+}
+
+span{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.container {
+  position: relative;
+  width: 340px;
+  height: 95px;
+  border: 1px solid $border-color;
+  background-color: #fff;
+  border-radius: 5pt;
+  overflow: hidden; // Clip overflowing content
+}
+
+.username {
+  position: absolute;
+  top: 12.5px;
+  left: 90px;
+  width: 120px;
+  height: 17.5px;
+  text-overflow: ellipsis; // Add ellipsis to clip overflowing content
+}
+
+.name {
+  position: absolute;
+  top: 12.5px;
+  left: 220px;
+  width: 70px;
+  height: 17.5px;
+  color: $text-color;
+}
+
+.bio {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  width: 200px;
+  height: 30px;
+  font-size: 10px;
+}
+
+.location {
+  position: absolute;
+  top: 71px;
+  left: 90px;
+  width: 100px;
+  height: 17.5px;
+}
+
+.repos {
+  position: absolute;
+  top: 71px;
+  left: 200px;
+  width: 60px;
+  height: 17.5px;
+}
+
+.followers {
+  position: absolute;
+  top: 71px;
+  left: 250px;
+  width: 80px;
+  height: 17.5px;
+}
+
+.followersIcon{
+  position: absolute;
+  top: 4px;
+  left: 20px;
+}
+
+.reposIcon{
+  position: absolute;
+  top: 4px;
+  left: 10px;
+}
+
+.image {
+  position: absolute;
+  top: 12.5px;
+  left: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+
+// User Page
+.UserPageLayout{
+    display: grid;
+    grid: auto auto auto;
+
+
+  // UserPage Info Section
+  #UserPageUserInfo{
+    grid-column: 1;
+    background-color: $bg-color2;
+    border: 1px solid black;
+
+    #UserPageUserInfo p, h2{
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+
+    #UserPageImage{
+      border: 1px solid black;
+      margin:14px;
+    }
+
+    #UserPageUsername{
+      // border: solid black 1pt;
+      color: white;
+      margin-top: 0pt;
+      -webkit-text-stroke: 1px $link-text-stroke;
+      font-size: 23pt;
+      // Underline animation from https://stackoverflow.com/questions/62867788/text-underline-animation-in-css-the-simplest-way
+      background: linear-gradient(currentColor 0 0) 
+        bottom left/
+        var(--underline-width, 5%) 0.1em
+      no-repeat;
+      text-decoration: none;
+      transition: background-size 0.3s;
+    }
+
+
+
+    // Underline animation from https://stackoverflow.com/questions/62867788/text-underline-animation-in-css-the-simplest-way
+    #UserPageUsername:hover{
+      // border: solid black 1pt;
+      color: #ffffff;
+      margin-top: 0pt;
+      -webkit-text-stroke: 1px $link-text-stroke;
+      --underline-width: 80%;
+      font-size: 23pt;
+    }
+
+    #UserPageName{
+      // border: solid black 1pt;
+      color: $text-color;
+      font-size: large;
+      margin-top: -14pt;
+      margin-left: 5pt;
+      -webkit-text-stroke: 0.4px $link-text-stroke;
+    }
+
+    #UserPageBio{
+      // border: solid black 1pt;
+      margin: 10pt;
+      padding: 10pt;
+    }
+  }
+
+  // UserPage repo Section
+  #UserPageRepos{
+    grid-column: 2 / span 300;
+    text-wrap: stable;
+    padding: 20pt;
+    box-shadow: 0 0 20px 10px inset $bg-color3;
+    padding-left: 40pt;
+    padding-right: 50pt;
+    border: 1px solid black;
+    border-left: none;
+
+    // Repos
+    .repo{
+      border: solid #c4c4c4 1pt;
+      margin-top: 15pt;
+      margin-left: 25pt;
+      padding: 10pt;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: $bg-color;
+    }
+
+    .topContainerUserPageRepo{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: -6px;
+    }
+
+    .bottomContainerUserPageRepo{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: -10px;
+    }
+
+    .repoName{
+      // border: solid black 1pt;
+      margin-bottom: 5px;
+      margin-top: 3pt;
+      padding: 5pt;
+    }
+
+    .repoCreationDate{
+      // border: solid black 1pt;
+      margin-bottom: 5px;
+      margin-top: 8px;
+      padding: 7pt;
+    }
+
+    .repoOwner{
+      // border: solid black 1pt;
+      padding: 3pt;
+    }
+
+    .repoWatchers{
+      // border: solid black 1pt;
+      padding: 3pt;
+    }
+
+    .repoForks{
+      // border: solid black 1pt;
+      padding: 3pt;
+    }
+
+    // Underline animation from https://stackoverflow.com/questions/62867788/text-underline-animation-in-css-the-simplest-way
+    .repoName {
+      background: linear-gradient(currentColor 0 0) 
+        bottom left/
+        var(--underline-width, 0%) 0.1em
+        no-repeat;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-size 0.3s;
+    }
+
+    .repo:hover .repoName {
+      --underline-width: 100%;
+    }
+  }
+}
+
+// Repo Page
+.RepoPageLayout{
+  display: grid;
+  grid: auto auto auto;
+
+  // RepoPage Info Section
+  #RepoPageInfo{
+    background-color: $bg-color2;
+    grid-column: 1;
+    padding:10pt;
+
+    #RepoPageName{
+      color: $border-color;
+      margin-top: -3pt;
+      margin-left: 5pt;
+      text-decoration: underline double black 1pt ;
+    }
+
+    #RepoPageDescription p{
+      margin-top: 0;
+      padding: 10pt;
+    }
+
+    #RepoPageOwner{
+      color: white;
+      -webkit-text-stroke: 1px #74360B;
+    }
+
+    #RepoPageSubscribers{
+      justify-content: space-between;
+    }
+
+    #RepoPageForks{
+      justify-content: space-between;
+    }
+
+    #RepoPageLatestCommit{
+      justify-content: space-between;
+    }
+
+    #RepoPageCreationDate{
+      justify-content: space-between;
+    }
+
+    #RepoPageLastUpdated{
+      justify-content: space-between;
+    }
+
+    #RepoPageLink{
+      // border: solid black 1pt;
+      color: $link-text-stroke;
+      margin-top: 0pt;
+      font-size: 13pt;
+      // Underline animation from https://stackoverflow.com/questions/62867788/text-underline-animation-in-css-the-simplest-way
+      background: linear-gradient(currentColor 0 0) 
+        bottom left/
+        var(--underline-width, 5%) 0.1em
+      no-repeat;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-size 0.3s;
+    }
+
+    // Underline animation from https://stackoverflow.com/questions/62867788/text-underline-animation-in-css-the-simplest-way
+    #RepoPageLink:hover{
+      // border: solid black 1pt;
+      color: #ffffff;
+      margin-top: 0pt;
+      -webkit-text-stroke: 1px $link-text-stroke;
+      --underline-width: 100%;
+      font-size: 13pt;
+    }
+  }
+
+  // RepoPage Commit Section
+  #RepoPageCommits{
+    grid-column: 2 / span 2;
+    text-wrap: stable;
+    padding: 20pt;
+    box-shadow: 0 0 20px 10px inset $bg-color3;
+    padding-left: 40pt;
+    padding-right: 50pt;
+
+    #RepoPageCommits h1{
+      margin-top: -2pt;
+    }
+
+    // Commits
+    .commit{
+      margin-top: 15pt;
+      margin-left: 25pt;
+      background-color: $bg-color;
+      padding: 10pt;
+      box-shadow: 0 0 5px  $bg-color2;
+    }
+
+    .commit:hover, .repo:hover {
+      box-shadow: 0 0 5px 2px $text-color inset;
+      background-color: $bg-color4;
+      border-radius: 0.5px;
+      transition: box-shadow background-color 0.1s;
+    }
+
+    .topContainerRepoPageCommit{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: -6px;
+    }
+
+    .bottomContainerRepoPageCommit{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: -10px;
+    }
+
+    .commitAuthor{
+      margin-bottom: 5px;
+      margin-top: 3pt;
+      padding: 5pt;
+    }
+
+    .commitCreationDate{
+      margin-bottom: 5px;
+      margin-top: 8px;
+      margin-left: -50px;
+      padding: 7pt;
+    }
+
+    .commitMessage{
+      padding: 3pt;
+    }
+
+    // Underline animation from https://stackoverflow.com/questions/62867788/text-underline-animation-in-css-the-simplest-way
+    .commitAuthor {
+      background: linear-gradient(currentColor 0 0) 
+        bottom left/
+        var(--underline-width, 0%) 0.1em
+        no-repeat;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-size 0.3s;
+    }
+
+    .commit:hover .commitAuthor {
+      --underline-width: 100%;
+    }
+  }
+}

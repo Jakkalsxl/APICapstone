@@ -1,0 +1,376 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500);
+body {
+  padding: 25pt;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.label {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#RepoPageInfo .data {
+  margin-left: -100px;
+}
+
+#RepoPageInfo .lable {
+  margin-right: -100px;
+}
+
+#searchBar {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  outline: none;
+  color: #09F56E;
+}
+
+#searchBar input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  flex: 1;
+}
+
+.search-button:hover {
+  background-color: #f0f0f0;
+  color: #06BD63;
+}
+
+.search-button:hover .green-magnifying-glass {
+  fill: #039C47;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.container {
+  position: relative;
+  width: 340px;
+  height: 95px;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 5pt;
+  overflow: hidden;
+}
+
+.username {
+  position: absolute;
+  top: 12.5px;
+  left: 90px;
+  width: 120px;
+  height: 17.5px;
+  text-overflow: ellipsis;
+}
+
+.name {
+  position: absolute;
+  top: 12.5px;
+  left: 220px;
+  width: 70px;
+  height: 17.5px;
+  color: #8A8A8A;
+}
+
+.bio {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  width: 200px;
+  height: 30px;
+  font-size: 10px;
+}
+
+.location {
+  position: absolute;
+  top: 71px;
+  left: 90px;
+  width: 100px;
+  height: 17.5px;
+}
+
+.repos {
+  position: absolute;
+  top: 71px;
+  left: 200px;
+  width: 60px;
+  height: 17.5px;
+}
+
+.followers {
+  position: absolute;
+  top: 71px;
+  left: 250px;
+  width: 80px;
+  height: 17.5px;
+}
+
+.followersIcon {
+  position: absolute;
+  top: 4px;
+  left: 20px;
+}
+
+.reposIcon {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+}
+
+.image {
+  position: absolute;
+  top: 12.5px;
+  left: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+.UserPageLayout {
+  display: grid;
+  grid: auto auto auto;
+}
+.UserPageLayout #UserPageUserInfo {
+  grid-column: 1;
+  background-color: rgba(9, 161, 22, 0.5254901961);
+  border: 1px solid black;
+}
+.UserPageLayout #UserPageUserInfo #UserPageUserInfo p, .UserPageLayout #UserPageUserInfo h2 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.UserPageLayout #UserPageUserInfo #UserPageImage {
+  border: 1px solid black;
+  margin: 14px;
+}
+.UserPageLayout #UserPageUserInfo #UserPageUsername {
+  color: white;
+  margin-top: 0pt;
+  -webkit-text-stroke: 1px #2100DE;
+  font-size: 23pt;
+  background: linear-gradient(currentColor 0 0) bottom left/var(--underline-width, 5%) 0.1em no-repeat;
+  text-decoration: none;
+  transition: background-size 0.3s;
+}
+.UserPageLayout #UserPageUserInfo #UserPageUsername:hover {
+  color: #ffffff;
+  margin-top: 0pt;
+  -webkit-text-stroke: 1px #2100DE;
+  --underline-width: 80%;
+  font-size: 23pt;
+}
+.UserPageLayout #UserPageUserInfo #UserPageName {
+  color: #8A8A8A;
+  font-size: large;
+  margin-top: -14pt;
+  margin-left: 5pt;
+  -webkit-text-stroke: 0.4px #2100DE;
+}
+.UserPageLayout #UserPageUserInfo #UserPageBio {
+  margin: 10pt;
+  padding: 10pt;
+}
+.UserPageLayout #UserPageRepos {
+  grid-column: 2/span 300;
+  text-wrap: stable;
+  padding: 20pt;
+  box-shadow: 0 0 20px 10px inset #bcbcea;
+  padding-left: 40pt;
+  padding-right: 50pt;
+  border: 1px solid black;
+  border-left: none;
+}
+.UserPageLayout #UserPageRepos .repo {
+  border: solid #c4c4c4 1pt;
+  margin-top: 15pt;
+  margin-left: 25pt;
+  padding: 10pt;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #ececec;
+}
+.UserPageLayout #UserPageRepos .topContainerUserPageRepo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: -6px;
+}
+.UserPageLayout #UserPageRepos .bottomContainerUserPageRepo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: -10px;
+}
+.UserPageLayout #UserPageRepos .repoName {
+  margin-bottom: 5px;
+  margin-top: 3pt;
+  padding: 5pt;
+}
+.UserPageLayout #UserPageRepos .repoCreationDate {
+  margin-bottom: 5px;
+  margin-top: 8px;
+  padding: 7pt;
+}
+.UserPageLayout #UserPageRepos .repoOwner {
+  padding: 3pt;
+}
+.UserPageLayout #UserPageRepos .repoWatchers {
+  padding: 3pt;
+}
+.UserPageLayout #UserPageRepos .repoForks {
+  padding: 3pt;
+}
+.UserPageLayout #UserPageRepos .repoName {
+  background: linear-gradient(currentColor 0 0) bottom left/var(--underline-width, 0%) 0.1em no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-size 0.3s;
+}
+.UserPageLayout #UserPageRepos .repo:hover .repoName {
+  --underline-width: 100%;
+}
+
+.RepoPageLayout {
+  display: grid;
+  grid: auto auto auto;
+}
+.RepoPageLayout #RepoPageInfo {
+  background-color: rgba(9, 161, 22, 0.5254901961);
+  grid-column: 1;
+  padding: 10pt;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageName {
+  color: #000;
+  margin-top: -3pt;
+  margin-left: 5pt;
+  -webkit-text-decoration: underline double black 1pt;
+          text-decoration: underline double black 1pt;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageDescription p {
+  margin-top: 0;
+  padding: 10pt;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageOwner {
+  color: white;
+  -webkit-text-stroke: 1px #74360B;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageSubscribers {
+  justify-content: space-between;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageForks {
+  justify-content: space-between;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageLatestCommit {
+  justify-content: space-between;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageCreationDate {
+  justify-content: space-between;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageLastUpdated {
+  justify-content: space-between;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageLink {
+  color: #2100DE;
+  margin-top: 0pt;
+  font-size: 13pt;
+  background: linear-gradient(currentColor 0 0) bottom left/var(--underline-width, 5%) 0.1em no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-size 0.3s;
+}
+.RepoPageLayout #RepoPageInfo #RepoPageLink:hover {
+  color: #ffffff;
+  margin-top: 0pt;
+  -webkit-text-stroke: 1px #2100DE;
+  --underline-width: 100%;
+  font-size: 13pt;
+}
+.RepoPageLayout #RepoPageCommits {
+  grid-column: 2/span 2;
+  text-wrap: stable;
+  padding: 20pt;
+  box-shadow: 0 0 20px 10px inset #bcbcea;
+  padding-left: 40pt;
+  padding-right: 50pt;
+}
+.RepoPageLayout #RepoPageCommits #RepoPageCommits h1 {
+  margin-top: -2pt;
+}
+.RepoPageLayout #RepoPageCommits .commit {
+  margin-top: 15pt;
+  margin-left: 25pt;
+  background-color: #ececec;
+  padding: 10pt;
+  box-shadow: 0 0 5px rgba(9, 161, 22, 0.5254901961);
+}
+.RepoPageLayout #RepoPageCommits .commit:hover, .RepoPageLayout #RepoPageCommits .repo:hover {
+  box-shadow: 0 0 5px 2px #8A8A8A inset;
+  background-color: rgba(9, 161, 22, 0.337254902);
+  border-radius: 0.5px;
+  transition: box-shadow background-color 0.1s;
+}
+.RepoPageLayout #RepoPageCommits .topContainerRepoPageCommit {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: -6px;
+}
+.RepoPageLayout #RepoPageCommits .bottomContainerRepoPageCommit {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: -10px;
+}
+.RepoPageLayout #RepoPageCommits .commitAuthor {
+  margin-bottom: 5px;
+  margin-top: 3pt;
+  padding: 5pt;
+}
+.RepoPageLayout #RepoPageCommits .commitCreationDate {
+  margin-bottom: 5px;
+  margin-top: 8px;
+  margin-left: -50px;
+  padding: 7pt;
+}
+.RepoPageLayout #RepoPageCommits .commitMessage {
+  padding: 3pt;
+}
+.RepoPageLayout #RepoPageCommits .commitAuthor {
+  background: linear-gradient(currentColor 0 0) bottom left/var(--underline-width, 0%) 0.1em no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-size 0.3s;
+}
+.RepoPageLayout #RepoPageCommits .commit:hover .commitAuthor {
+  --underline-width: 100%;
+}/*# sourceMappingURL=App.css.map */
